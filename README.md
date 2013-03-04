@@ -13,13 +13,13 @@ Usage
 ----
 To import data, edit the constants at the top of import_data.m
 
-EXP_ROOT: root directory of the experiment. trailing slash required
-IMG_ROOT: root directroy of the images. trailing slash required
-X_RES: X dimension of the display resolution
-Y_RES: Y dimension of the display resolution
-SUBJECT_NAMES: a cell array containing the base names of the subjects. 
-  The base name is the filename with the extension and GZD/EVD/FXD 
-	truncated. For example, the base of sub1GZD.txt is sub1
+* EXP_ROOT: root directory of the experiment. trailing slash required
+* IMG_ROOT: root directroy of the images. trailing slash required
+* X_RES: X dimension of the display resolution
+* Y_RES: Y dimension of the display resolution
+* SUBJECT_NAMES: a cell array containing the base names of the subjects. 
+* The base name is the filename with the extension and GZD/EVD/FXD truncated. For example, the base of sub1GZD.txt 
+is sub1.
 
 the resulting structure is called subjects. the general organization is as follows:
 
