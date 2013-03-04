@@ -23,40 +23,40 @@ is sub1.
 
 the resulting structure is called subjects. the general organization is as follows:
 
- subjects = 
+ > subjects = 
  
- 1x4 struct array with fields:
-     trials
-     name
+ > 1x4 struct array with fields:  
+ >    trials  
+ >    name  
 
- subjects(1).trials =
+ > subjects(1).trials = 
  
- 1x30 struct array with fields:
-     x
-     y
-     img
-     timestamp
-     fixX
-     fixY
-     fixTimes
-     fixDurations
+ > 1x30 struct array with fields:  
+ >     x  
+ >     y  
+ >     img  
+ >     timestamp  
+ >     fixX  
+ >     fixY  
+ >     fixTimes  
+ >    fixDurations  
 
-subjects(i).name: the subject's name
-subjects(i).trials: 1xnumTrials vector containing the data for each trial
-subjects(i).trials(j).x: 1xnumDataPoints vector containing the raw x gaze data
-subjects(i).trials(j).y: 1xnumDataPoints vector containing the raw y gaze data
-subjects(i).trials(j).img: contains the image shown for the trial. NOTE: the 
-	image either needs to be centered on a background of size X_RES x 
-	Y_RES or the gaze/fixation coordinates need to be transformed 
-	appropriately because the Tobii records with respect to monitor resolution,
-	not image size. quickdemo.m overlays the image on a	black background.
-subjects(i).trials(j).timestamp: the start time for trial j
-subjects(i).trials(j).fixX: 1xnumFixations vector containing the x fixation data
-subjects(i).trials(j).fixY: 1xnumFixations vector containing the y fixation data
-subjects(i).trials(j).fixTimes: 1xnumFixations vector containing the absolute 
-	timestamps of each fixation.
-subjects(i).trials(j).fixDurations: 1xnumFixations vector containing the durations 
-	of each fixation
+* subjects(i).name: the subject's name  
+* subjects(i).trials: 1xnumTrials vector containing the data for each trial  
+* subjects(i).trials(j).x: 1xnumDataPoints vector containing the raw x gaze data  
+* subjects(i).trials(j).y: 1xnumDataPoints vector containing the raw y gaze data  
+* subjects(i).trials(j).img: contains the image shown for the trial. NOTE: the  
+	image either needs to be centered on a background of size X_RES x  
+	Y_RES or the gaze/fixation coordinates need to be transformed  
+	appropriately because the Tobii records with respect to monitor resolution,  
+	not image size. quickdemo.m overlays the image on a black background.  
+* subjects(i).trials(j).timestamp: the start time for trial j   
+* subjects(i).trials(j).fixX: 1xnumFixations vector containing the x fixation data  
+* subjects(i).trials(j).fixY: 1xnumFixations vector containing the y fixation data  
+* subjects(i).trials(j).fixTimes: 1xnumFixations vector containing the absolute   
+	timestamps of each fixation.  
+* subjects(i).trials(j).fixDurations: 1xnumFixations vector containing the durations   
+	of each fixation  
 
 Also, the data may need to be cleaned to exclude trials that suffer from gaze drift or other
 unwanted artifcats. Run clean_data(subjects) to do so. Each trial will be displayed with the data
